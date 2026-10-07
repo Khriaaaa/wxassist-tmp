@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView android:id="@+id/status"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="14sp" android:paddingBottom="8dp"/>
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/btn_perm" android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:text="开通知使用权"/>
+            <Button android:id="@+id/btn_selftest" android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:text="自测通知"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="接口 Base URL" android:textSize="12sp" android:paddingTop="12dp"/>
+        <EditText android:id="@+id/et_base" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="https://api.example.com/v1"
+            android:singleLine="true"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="API Key" android:textSize="12sp"/>
+        <EditText android:id="@+id/et_key" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="sk-..." android:singleLine="true"/>
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:id="@+id/et_model" android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:hint="deepseek-v4.1-flash" android:singleLine="true"/>
+            <Button android:id="@+id/btn_save" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="保存"/>
+            <Button android:id="@+id/btn_test" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="测链路"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="监控名单（每行一个联系人名）" android:textSize="12sp" android:paddingTop="12dp"/>
+        <EditText android:id="@+id/et_names" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minLines="3" android:gravity="top"/>
+
+        <Button android:id="@+id/btn_names" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="保存名单"/>
+        <Button android:id="@+id/btn_history" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="看生成历史"/>
+    </LinearLayout>
+</ScrollView>
